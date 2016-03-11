@@ -13,6 +13,7 @@
 #import "ALICollectionViewCell.h"
 
 #define kHeaderViewHeight 110
+#define kTabBarHeight 44
 #define kCell @"cell"
 
 @interface ALIPayViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
@@ -41,13 +42,13 @@
     [self.view addSubview:headerView];
     self.headerView = headerView;
     
-    //设置滚动主视图
-    ALICollectionView *mainView = [[ALICollectionView alloc] initWithFrame:CGRectMake(0, kHeaderViewHeight, self.view.width, self.view.heigth - kHeaderViewHeight - 44)];
+    //设置滚动主视图,注意:在这里self.view刚被加载完,其初始frame跟屏幕一样,还没有为navigationbar留出高度
+    ALICollectionView *mainView = [[ALICollectionView alloc] initWithFrame:CGRectMake(0, kHeaderViewHeight, self.view.width, self.view.heigth - kHeaderViewHeight - kTabBarHeight)];
     mainView.dataSource = self;
     mainView.delegate = self;
     [self.view addSubview:mainView];
     self.mainView = mainView;
-    self.mainView.contentInset = UIEdgeInsetsMake(0, 0, 64 + 20, 0);
+    self.mainView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
     
     // 注册主视图cell
     [mainView registerClass:[ALICollectionViewCell class] forCellWithReuseIdentifier:kCell];
@@ -56,6 +57,8 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.headerView.frame = CGRectMake(0, 0, ScreenWidth, kHeaderViewHeight);
+    //在这里self.view.frame已经重新被设置,留出了导航栏的高度,所以要重样的设置的一下mainView的高度
+    self.mainView.frame = CGRectMake(0, kHeaderViewHeight, ScreenWidth, self.view.heigth - kHeaderViewHeight - kTabBarHeight);
 }
 
 - (void)viewDidLayoutSubviews {
@@ -74,7 +77,6 @@
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.itemArray.count;
-//    return ;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,9 +90,7 @@
     return YES;
 }
 
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"%@",NSStringFromCGRect(self.view.frame));
-    NSLog(@"%@",NSStringFromCGSize([self.mainView.collectionViewLayout collectionViewContentSize]));
+
 }
 @end

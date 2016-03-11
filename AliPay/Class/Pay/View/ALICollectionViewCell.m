@@ -7,14 +7,11 @@
 //
 
 #import "ALICollectionViewCell.h"
-#import "ALIIconButton.h"
 #import "ALIItemModel.h"
 
 #define kDeleteIconMargin 8
 
 @interface ALICollectionViewCell ()
-
-@property (weak, nonatomic) ALIIconButton *iconButton;
 
 @property (weak, nonatomic) UIButton *deleteButton;
 @property (weak, nonatomic) UIImageView *iconView;
