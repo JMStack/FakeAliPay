@@ -15,7 +15,11 @@
 @interface ALICollectionViewCell ()
 
 @property (weak, nonatomic) ALIIconButton *iconButton;
+
 @property (weak, nonatomic) UIButton *deleteButton;
+@property (weak, nonatomic) UIImageView *iconView;
+@property (weak, nonatomic) UILabel *iconLabel;
+
 @end
 
 
@@ -26,16 +30,19 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        ALIIconButton *iconButton = [ALIIconButton buttonWithType:UIButtonTypeCustom];
-        iconButton.backgroundColor = [UIColor whiteColor];
-        iconButton.titleLabel.font = [UIFont systemFontOfSize:12];
-        iconButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-        [iconButton setTitleColor:[UIColor colorWithRed:155/255.0 green:155/255.0 blue:155/255.0 alpha:1] forState:UIControlStateNormal];
-        [self.contentView addSubview:iconButton];
-        self.iconButton = iconButton;
-        iconButton.enabled = YES;
-        [iconButton addTarget:self action:@selector(iconButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        _iconButton = iconButton;
+        
+        UIImageView *iconView = [[UIImageView alloc] init];
+        iconView.backgroundColor = [UIColor whiteColor];
+        iconView.contentMode = UIViewContentModeScaleAspectFit;
+        _iconView = iconView;
+        [self.contentView addSubview:iconView];
+        
+        UILabel *iconLabel = [[UILabel alloc] init];
+        iconLabel.font = [UIFont systemFontOfSize:12];
+        iconLabel.textAlignment = NSTextAlignmentCenter;
+        iconLabel.textColor = [UIColor colorWithRed:155/255.0 green:155/255.0 blue:155/255.0 alpha:1];
+        _iconLabel = iconLabel;
+        [self.contentView addSubview:iconLabel];
         
         UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
         deleteButton.backgroundColor = [UIColor whiteColor];
@@ -44,7 +51,9 @@
         deleteButton.hidden = NO;
         [self.contentView addSubview:deleteButton];
         self.deleteButton = deleteButton;
-        [iconButton addTarget:self action:@selector(deleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [deleteButton addTarget:self action:@selector(deleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        
+        self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -52,8 +61,8 @@
 - (void)setItemModel:(ALIItemModel *)itemModel {
     _itemModel = itemModel;
     
-    [self.iconButton setImage:[UIImage imageNamed:itemModel.icon] forState:UIControlStateNormal];
-    [self.iconButton setTitle:itemModel.title forState:UIControlStateNormal];
+    self.iconView.image = [UIImage imageNamed:itemModel.icon];
+    self.iconLabel.text = itemModel.title;
 }
 
 - (BOOL)hiddenDeleteButton {
@@ -66,11 +75,6 @@
     self.deleteButton.hidden = hiddenDeleteButton;
 }
 
-
-- (void)iconButtonTapped:(UIButton *)button {
-    NSLog(@"%s",__func__);
-}
-
 - (void)deleteButtonTapped:(UIButton *)button {
      NSLog(@"%s",__func__);
     NSLog(@"%@",NSStringFromCGRect(self.deleteButton.frame));
@@ -79,8 +83,19 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+            
+    CGFloat h = self.contentView.heigth * 0.3f;
+    CGFloat w = h;
+    CGFloat x = (self.contentView.width - w) / 2;
+    CGFloat y = self.contentView.heigth * 0.3;
+    self.iconView.frame = CGRectMake(x, y, w, h);
     
-    self.iconButton.frame = self.contentView.bounds;
+    h = self.contentView.heigth * 0.3;
+    w = self.contentView.width;
+    x = 0;
+    y = self.contentView.heigth * 0.6;
+    self.iconLabel.frame = CGRectMake(x, y, w, h);
+
     CGRect rect = self.deleteButton.frame;
     rect.origin.x = self.contentView.width - rect.size.width - kDeleteIconMargin;
     rect.origin.y = kDeleteIconMargin;
