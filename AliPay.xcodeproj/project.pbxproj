@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED7B9F0E1C8FFDCB00CFE772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B9F041C8FFDCB00CFE772 /* AppDelegate.m */; };
+		ED7B9F131C8FFF3700CFE772 /* ALITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B9F121C8FFF3700CFE772 /* ALITabBarController.m */; };
+		ED7B9F161C9001D800CFE772 /* ALINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B9F151C9001D800CFE772 /* ALINavigationController.m */; };
+		ED7B9F191C9002BF00CFE772 /* ALIPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B9F181C9002BF00CFE772 /* ALIPayViewController.m */; };
+		ED7B9F1B1C9006C100CFE772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7B9F1A1C9006C100CFE772 /* Assets.xcassets */; };
+		ED7E06A81C900AAB00F3FA92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06A71C900AAB00F3FA92 /* main.m */; };
+		ED7E06AB1C900E4400F3FA92 /* ALIBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06AA1C900E4400F3FA92 /* ALIBaseTableViewController.m */; };
+		ED7E06AE1C900E7400F3FA92 /* ALIServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06AD1C900E7400F3FA92 /* ALIServiceTableViewController.m */; };
+		ED7E06B11C900E8E00F3FA92 /* ALIDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06B01C900E8E00F3FA92 /* ALIDiscoveryViewController.m */; };
+		ED7E06B71C900ED000F3FA92 /* ALIAssetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06B61C900ED000F3FA92 /* ALIAssetTableViewController.m */; };
+		ED7E06BB1C9021E800F3FA92 /* ALIHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06BA1C9021E800F3FA92 /* ALIHeaderView.m */; };
+		ED7E06BE1C902CDC00F3FA92 /* ALICollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06BD1C902CDC00F3FA92 /* ALICollectionView.m */; };
+		ED7E06C51C902EC500F3FA92 /* UIView+Ali.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06C41C902EC500F3FA92 /* UIView+Ali.m */; };
+		ED7E06C81C903B9600F3FA92 /* ALIItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06C71C903B9600F3FA92 /* ALIItemModel.m */; };
+		ED7E06CA1C9044A400F3FA92 /* mainViewItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED7E06C91C9044A400F3FA92 /* mainViewItems.plist */; };
+		ED7E06CD1C904B6900F3FA92 /* ALICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06CC1C904B6900F3FA92 /* ALICollectionViewCell.m */; };
+		ED7E06D61C90518F00F3FA92 /* ALIIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06D51C90518F00F3FA92 /* ALIIconButton.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED7B9ED81C8FF9B300CFE772 /* AliPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7B9EEC1C8FF9B300CFE772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED7B9F031C8FFDCB00CFE772 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED7B9F041C8FFDCB00CFE772 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED7B9F111C8FFF3700CFE772 /* ALITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALITabBarController.h; sourceTree = "<group>"; };
+		ED7B9F121C8FFF3700CFE772 /* ALITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALITabBarController.m; sourceTree = "<group>"; };
+		ED7B9F141C9001D800CFE772 /* ALINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALINavigationController.h; sourceTree = "<group>"; };
+		ED7B9F151C9001D800CFE772 /* ALINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALINavigationController.m; sourceTree = "<group>"; };
+		ED7B9F171C9002BF00CFE772 /* ALIPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIPayViewController.h; sourceTree = "<group>"; };
+		ED7B9F181C9002BF00CFE772 /* ALIPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALIPayViewController.m; sourceTree = "<group>"; };
+		ED7B9F1A1C9006C100CFE772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED7E06A71C900AAB00F3FA92 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED7E06A91C900E4400F3FA92 /* ALIBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIBaseTableViewController.h; sourceTree = "<group>"; };
+		ED7E06AA1C900E4400F3FA92 /* ALIBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALIBaseTableViewController.m; sourceTree = "<group>"; };
+		ED7E06AC1C900E7400F3FA92 /* ALIServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIServiceTableViewController.h; sourceTree = "<group>"; };
+		ED7E06AD1C900E7400F3FA92 /* ALIServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALIServiceTableViewController.m; sourceTree = "<group>"; };
+		ED7E06AF1C900E8E00F3FA92 /* ALIDiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIDiscoveryViewController.h; sourceTree = "<group>"; };
+		ED7E06B01C900E8E00F3FA92 /* ALIDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALIDiscoveryViewController.m; sourceTree = "<group>"; };
+		ED7E06B51C900ED000F3FA92 /* ALIAssetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIAssetTableViewController.h; sourceTree = "<group>"; };
+		ED7E06B61C900ED000F3FA92 /* ALIAssetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALIAssetTableViewController.m; sourceTree = "<group>"; };
+		ED7E06B81C90184800F3FA92 /* AliPay.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliPay.pch; sourceTree = "<group>"; };
+		ED7E06B91C9021E800F3FA92 /* ALIHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIHeaderView.h; sourceTree = "<group>"; };
+		ED7E06BA1C9021E800F3FA92 /* ALIHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALIHeaderView.m; sourceTree = "<group>"; };
+		ED7E06BC1C902CDC00F3FA92 /* ALICollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALICollectionView.h; sourceTree = "<group>"; };
+		ED7E06BD1C902CDC00F3FA92 /* ALICollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALICollectionView.m; sourceTree = "<group>"; };
+		ED7E06C31C902EC500F3FA92 /* UIView+Ali.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ali.h"; sourceTree = "<group>"; };
+		ED7E06C41C902EC500F3FA92 /* UIView+Ali.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ali.m"; sourceTree = "<group>"; };
+		ED7E06C61C903B9600F3FA92 /* ALIItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIItemModel.h; sourceTree = "<group>"; };
+		ED7E06C71C903B9600F3FA92 /* ALIItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALIItemModel.m; sourceTree = "<group>"; };
+		ED7E06C91C9044A400F3FA92 /* mainViewItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainViewItems.plist; sourceTree = "<group>"; };
+		ED7E06CB1C904B6900F3FA92 /* ALICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALICollectionViewCell.h; sourceTree = "<group>"; };
+		ED7E06CC1C904B6900F3FA92 /* ALICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALICollectionViewCell.m; sourceTree = "<group>"; };
+		ED7E06D41C90518F00F3FA92 /* ALIIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIIconButton.h; sourceTree = "<group>"; };
+		ED7E06D51C90518F00F3FA92 /* ALIIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALIIconButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED7B9ED51C8FF9B300CFE772 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED7B9ECF1C8FF9B300CFE772 = {
+			isa = PBXGroup;
+			children = (
+				ED7B9EDA1C8FF9B300CFE772 /* AliPay */,
+				ED7B9ED91C8FF9B300CFE772 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED7B9ED91C8FF9B300CFE772 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9ED81C8FF9B300CFE772 /* AliPay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED7B9EDA1C8FF9B300CFE772 /* AliPay */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9EF41C8FFDCB00CFE772 /* Class */,
+				ED7B9EDB1C8FF9B300CFE772 /* Supporting Files */,
+			);
+			path = AliPay;
+			sourceTree = "<group>";
+		};
+		ED7B9EDB1C8FF9B300CFE772 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9EEC1C8FF9B300CFE772 /* Info.plist */,
+				ED7E06A71C900AAB00F3FA92 /* main.m */,
+				ED7B9F1A1C9006C100CFE772 /* Assets.xcassets */,
+				ED7E06C91C9044A400F3FA92 /* mainViewItems.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED7B9EF41C8FFDCB00CFE772 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9F061C8FFDCB00CFE772 /* Pay */,
+				ED7B9F0A1C8FFDCB00CFE772 /* Service */,
+				ED7B9EFA1C8FFDCB00CFE772 /* Discovery */,
+				ED7B9EF51C8FFDCB00CFE772 /* Asset */,
+				ED7B9EF91C8FFDCB00CFE772 /* BasicTool */,
+				ED7B9F021C8FFDCB00CFE772 /* Other */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		ED7B9EF51C8FFDCB00CFE772 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9EF61C8FFDCB00CFE772 /* Controller */,
+				ED7B9EF71C8FFDCB00CFE772 /* Model */,
+				ED7B9EF81C8FFDCB00CFE772 /* View */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		ED7B9EF61C8FFDCB00CFE772 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED7E06B51C900ED000F3FA92 /* ALIAssetTableViewController.h */,
+				ED7E06B61C900ED000F3FA92 /* ALIAssetTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED7B9EF71C8FFDCB00CFE772 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED7B9EF81C8FFDCB00CFE772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED7B9EF91C8FFDCB00CFE772 /* BasicTool */ = {
+			isa = PBXGroup;
+			children = (
+				ED7E06A91C900E4400F3FA92 /* ALIBaseTableViewController.h */,
+				ED7E06AA1C900E4400F3FA92 /* ALIBaseTableViewController.m */,
+			);
+			path = BasicTool;
+			sourceTree = "<group>";
+		};
+		ED7B9EFA1C8FFDCB00CFE772 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9EFE1C8FFDCB00CFE772 /* MainFrame */,
+				ED7B9EFB1C8FFDCB00CFE772 /* Controller */,
+				ED7B9EFC1C8FFDCB00CFE772 /* Model */,
+				ED7B9EFD1C8FFDCB00CFE772 /* View */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		ED7B9EFB1C8FFDCB00CFE772 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED7E06AF1C900E8E00F3FA92 /* ALIDiscoveryViewController.h */,
+				ED7E06B01C900E8E00F3FA92 /* ALIDiscoveryViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED7B9EFC1C8FFDCB00CFE772 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED7B9EFD1C8FFDCB00CFE772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED7B9EFE1C8FFDCB00CFE772 /* MainFrame */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9EFF1C8FFDCB00CFE772 /* Controller */,
+				ED7B9F001C8FFDCB00CFE772 /* Model */,
+				ED7B9F011C8FFDCB00CFE772 /* View */,
+			);
+			name = MainFrame;
+			path = ../MainFrame;
+			sourceTree = "<group>";
+		};
+		ED7B9EFF1C8FFDCB00CFE772 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9F111C8FFF3700CFE772 /* ALITabBarController.h */,
+				ED7B9F121C8FFF3700CFE772 /* ALITabBarController.m */,
+				ED7B9F141C9001D800CFE772 /* ALINavigationController.h */,
+				ED7B9F151C9001D800CFE772 /* ALINavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED7B9F001C8FFDCB00CFE772 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED7B9F011C8FFDCB00CFE772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED7B9F021C8FFDCB00CFE772 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9F031C8FFDCB00CFE772 /* AppDelegate.h */,
+				ED7B9F041C8FFDCB00CFE772 /* AppDelegate.m */,
+				ED7E06BF1C902E6F00F3FA92 /* Category */,
+				ED7B9F051C8FFDCB00CFE772 /* Library */,
+				ED7E06B81C90184800F3FA92 /* AliPay.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		ED7B9F051C8FFDCB00CFE772 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		ED7B9F061C8FFDCB00CFE772 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9F071C8FFDCB00CFE772 /* Controller */,
+				ED7B9F081C8FFDCB00CFE772 /* Model */,
+				ED7B9F091C8FFDCB00CFE772 /* View */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
+		ED7B9F071C8FFDCB00CFE772 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9F171C9002BF00CFE772 /* ALIPayViewController.h */,
+				ED7B9F181C9002BF00CFE772 /* ALIPayViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED7B9F081C8FFDCB00CFE772 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED7E06C61C903B9600F3FA92 /* ALIItemModel.h */,
+				ED7E06C71C903B9600F3FA92 /* ALIItemModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED7B9F091C8FFDCB00CFE772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED7E06B91C9021E800F3FA92 /* ALIHeaderView.h */,
+				ED7E06BA1C9021E800F3FA92 /* ALIHeaderView.m */,
+				ED7E06BC1C902CDC00F3FA92 /* ALICollectionView.h */,
+				ED7E06BD1C902CDC00F3FA92 /* ALICollectionView.m */,
+				ED7E06CB1C904B6900F3FA92 /* ALICollectionViewCell.h */,
+				ED7E06CC1C904B6900F3FA92 /* ALICollectionViewCell.m */,
+				ED7E06D41C90518F00F3FA92 /* ALIIconButton.h */,
+				ED7E06D51C90518F00F3FA92 /* ALIIconButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED7B9F0A1C8FFDCB00CFE772 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B9F0B1C8FFDCB00CFE772 /* Controller */,
+				ED7B9F0C1C8FFDCB00CFE772 /* Model */,
+				ED7B9F0D1C8FFDCB00CFE772 /* View */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		ED7B9F0B1C8FFDCB00CFE772 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED7E06AC1C900E7400F3FA92 /* ALIServiceTableViewController.h */,
+				ED7E06AD1C900E7400F3FA92 /* ALIServiceTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED7B9F0C1C8FFDCB00CFE772 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED7B9F0D1C8FFDCB00CFE772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED7E06BF1C902E6F00F3FA92 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				ED7E06C31C902EC500F3FA92 /* UIView+Ali.h */,
+				ED7E06C41C902EC500F3FA92 /* UIView+Ali.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED7B9ED71C8FF9B300CFE772 /* AliPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED7B9EEF1C8FF9B300CFE772 /* Build configuration list for PBXNativeTarget "AliPay" */;
+			buildPhases = (
+				ED7B9ED41C8FF9B300CFE772 /* Sources */,
+				ED7B9ED51C8FF9B300CFE772 /* Frameworks */,
+				ED7B9ED61C8FF9B300CFE772 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AliPay;
+			productName = AliPay;
+			productReference = ED7B9ED81C8FF9B300CFE772 /* AliPay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED7B9ED01C8FF9B300CFE772 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ALI;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Jack.Ma;
+				TargetAttributes = {
+					ED7B9ED71C8FF9B300CFE772 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Q85YNDP8X4;
+					};
+				};
+			};
+			buildConfigurationList = ED7B9ED31C8FF9B300CFE772 /* Build configuration list for PBXProject "AliPay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED7B9ECF1C8FF9B300CFE772;
+			productRefGroup = ED7B9ED91C8FF9B300CFE772 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED7B9ED71C8FF9B300CFE772 /* AliPay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED7B9ED61C8FF9B300CFE772 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED7B9F1B1C9006C100CFE772 /* Assets.xcassets in Resources */,
+				ED7E06CA1C9044A400F3FA92 /* mainViewItems.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED7B9ED41C8FF9B300CFE772 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED7E06D61C90518F00F3FA92 /* ALIIconButton.m in Sources */,
+				ED7E06A81C900AAB00F3FA92 /* main.m in Sources */,
+				ED7E06C51C902EC500F3FA92 /* UIView+Ali.m in Sources */,
+				ED7B9F131C8FFF3700CFE772 /* ALITabBarController.m in Sources */,
+				ED7E06CD1C904B6900F3FA92 /* ALICollectionViewCell.m in Sources */,
+				ED7E06AE1C900E7400F3FA92 /* ALIServiceTableViewController.m in Sources */,
+				ED7B9F0E1C8FFDCB00CFE772 /* AppDelegate.m in Sources */,
+				ED7E06BB1C9021E800F3FA92 /* ALIHeaderView.m in Sources */,
+				ED7E06B11C900E8E00F3FA92 /* ALIDiscoveryViewController.m in Sources */,
+				ED7B9F191C9002BF00CFE772 /* ALIPayViewController.m in Sources */,
+				ED7E06C81C903B9600F3FA92 /* ALIItemModel.m in Sources */,
+				ED7E06BE1C902CDC00F3FA92 /* ALICollectionView.m in Sources */,
+				ED7E06B71C900ED000F3FA92 /* ALIAssetTableViewController.m in Sources */,
+				ED7B9F161C9001D800CFE772 /* ALINavigationController.m in Sources */,
+				ED7E06AB1C900E4400F3FA92 /* ALIBaseTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ED7B9EED1C8FF9B300CFE772 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED7B9EEE1C8FF9B300CFE772 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED7B9EF01C8FF9B300CFE772 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AliPay/Class/Other/AliPay.pch;
+				INFOPLIST_FILE = AliPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JackMa.AliPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED7B9EF11C8FF9B300CFE772 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AliPay/Class/Other/AliPay.pch;
+				INFOPLIST_FILE = AliPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JackMa.AliPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED7B9ED31C8FF9B300CFE772 /* Build configuration list for PBXProject "AliPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7B9EED1C8FF9B300CFE772 /* Debug */,
+				ED7B9EEE1C8FF9B300CFE772 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED7B9EEF1C8FF9B300CFE772 /* Build configuration list for PBXNativeTarget "AliPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7B9EF01C8FF9B300CFE772 /* Debug */,
+				ED7B9EF11C8FF9B300CFE772 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED7B9ED01C8FF9B300CFE772 /* Project object */;
+}

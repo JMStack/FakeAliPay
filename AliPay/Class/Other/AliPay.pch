@@ -1,0 +1,29 @@
+//
+//  AliPay.pch
+//  AliPay
+//
+//  Created by Jack.Ma on 16/3/9.
+//  Copyright © 2016年 Jack.Ma. All rights reserved.
+//
+
+#ifndef AliPay_pch
+#define AliPay_pch
+
+#ifdef __OBJC__
+
+#ifdef DEBUG
+    #define NSLog(...) NSLog(__VA_ARGS__)
+    #define debugMethod() NSLog(@"%s", __func__)
+#else
+    #define NSLog(...)
+    #define debugMethod()
+#endif
+
+#import "UIView+Ali.h"
+
+#define ScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define ScreenHeight ([UIScreen mainScreen].bounds.size.heigth)
+
+#endif
+
+#endif /* AliPay_pch */
