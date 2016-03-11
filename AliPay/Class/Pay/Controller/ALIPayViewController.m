@@ -16,7 +16,6 @@
 #define kCell @"cell"
 
 @interface ALIPayViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
-≥
 @property (weak, nonatomic) UIView *headerView;
 @property (weak, nonatomic) UICollectionView *mainView;
 @property (strong, nonatomic) NSMutableArray <ALIItemModel *> *itemArray;
@@ -48,7 +47,7 @@
     mainView.delegate = self;
     [self.view addSubview:mainView];
     self.mainView = mainView;
-    self.mainView.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
+    self.mainView.contentInset = UIEdgeInsetsMake(0, 0, 64 + 20, 0);
     // 注册主视图cell
     [mainView registerClass:[ALICollectionViewCell class] forCellWithReuseIdentifier:kCell];
 //    [mainView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kCell];

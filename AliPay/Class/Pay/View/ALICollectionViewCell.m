@@ -18,31 +18,42 @@
 @property (weak, nonatomic) UIButton *deleteButton;
 @end
 
+
+
 @implementation ALICollectionViewCell
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        ALIIconButton *iconButton = [ALIIconButton buttonWithType:UIButtonTypeCustom];
+        iconButton.backgroundColor = [UIColor whiteColor];
+        iconButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        iconButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+        [iconButton setTitleColor:[UIColor colorWithRed:155/255.0 green:155/255.0 blue:155/255.0 alpha:1] forState:UIControlStateNormal];
+        [self.contentView addSubview:iconButton];
+        self.iconButton = iconButton;
+        iconButton.enabled = YES;
+        [iconButton addTarget:self action:@selector(iconButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        _iconButton = iconButton;
+        
+        UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        deleteButton.backgroundColor = [UIColor whiteColor];
+        [deleteButton setImage:[UIImage imageNamed:@"Home_delete_icon"] forState:UIControlStateNormal];
+        [deleteButton sizeToFit];
+        deleteButton.hidden = NO;
+        [self.contentView addSubview:deleteButton];
+        self.deleteButton = deleteButton;
+        [iconButton addTarget:self action:@selector(deleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return self;
+}
 
 - (void)setItemModel:(ALIItemModel *)itemModel {
     _itemModel = itemModel;
     
-    ALIIconButton *iconButton = [ALIIconButton buttonWithType:UIButtonTypeCustom];
-    iconButton.backgroundColor = [UIColor whiteColor];
-    [iconButton setImage:[UIImage imageNamed:itemModel.icon] forState:UIControlStateNormal];
-    [iconButton setTitle:itemModel.title forState:UIControlStateNormal];
-    iconButton.titleLabel.font = [UIFont systemFontOfSize:12];
-    iconButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [iconButton setTitleColor:[UIColor colorWithRed:155/255.0 green:155/255.0 blue:155/255.0 alpha:1] forState:UIControlStateNormal];
-    [self.contentView addSubview:iconButton];
-    self.iconButton = iconButton;
-    iconButton.enabled = YES;
-    [iconButton addTarget:self action:@selector(iconButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    deleteButton.backgroundColor = [UIColor whiteColor];
-    [deleteButton setImage:[UIImage imageNamed:@"Home_delete_icon"] forState:UIControlStateNormal];
-    [deleteButton sizeToFit];
-    deleteButton.hidden = NO;
-    [self.contentView addSubview:deleteButton];
-    self.deleteButton = deleteButton;
-    [iconButton addTarget:self action:@selector(deleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.iconButton setImage:[UIImage imageNamed:itemModel.icon] forState:UIControlStateNormal];
+    [self.iconButton setTitle:itemModel.title forState:UIControlStateNormal];
 }
 
 - (BOOL)hiddenDeleteButton {
