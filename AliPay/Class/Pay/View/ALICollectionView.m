@@ -24,11 +24,4 @@
     return collectionView;
 }
 
-//- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
-//    if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
-//        
-//    }
-//    return self;
-//}
-
 @end

@@ -48,9 +48,9 @@
     [self.view addSubview:mainView];
     self.mainView = mainView;
     self.mainView.contentInset = UIEdgeInsetsMake(0, 0, 64 + 20, 0);
+    
     // 注册主视图cell
     [mainView registerClass:[ALICollectionViewCell class] forCellWithReuseIdentifier:kCell];
-//    [mainView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kCell];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -80,8 +80,6 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ALICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
     cell.itemModel = self.itemArray[indexPath.row];
-//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor purpleColor];
 
     return cell;
 }
@@ -89,6 +87,7 @@
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
+
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"%@",NSStringFromCGRect(self.view.frame));

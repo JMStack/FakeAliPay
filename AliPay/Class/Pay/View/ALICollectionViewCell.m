@@ -77,7 +77,6 @@
 
 - (void)deleteButtonTapped:(UIButton *)button {
      NSLog(@"%s",__func__);
-    NSLog(@"%@",NSStringFromCGRect(self.deleteButton.frame));
 }
 
 

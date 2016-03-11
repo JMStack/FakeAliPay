@@ -23,7 +23,6 @@
 		ED7E06C81C903B9600F3FA92 /* ALIItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06C71C903B9600F3FA92 /* ALIItemModel.m */; };
 		ED7E06CA1C9044A400F3FA92 /* mainViewItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED7E06C91C9044A400F3FA92 /* mainViewItems.plist */; };
 		ED7E06CD1C904B6900F3FA92 /* ALICollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06CC1C904B6900F3FA92 /* ALICollectionViewCell.m */; };
-		ED7E06D61C90518F00F3FA92 /* ALIIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7E06D51C90518F00F3FA92 /* ALIIconButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +58,6 @@
 		ED7E06C91C9044A400F3FA92 /* mainViewItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainViewItems.plist; sourceTree = "<group>"; };
 		ED7E06CB1C904B6900F3FA92 /* ALICollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALICollectionViewCell.h; sourceTree = "<group>"; };
 		ED7E06CC1C904B6900F3FA92 /* ALICollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALICollectionViewCell.m; sourceTree = "<group>"; };
-		ED7E06D41C90518F00F3FA92 /* ALIIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALIIconButton.h; sourceTree = "<group>"; };
-		ED7E06D51C90518F00F3FA92 /* ALIIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALIIconButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,8 +288,6 @@
 				ED7E06BD1C902CDC00F3FA92 /* ALICollectionView.m */,
 				ED7E06CB1C904B6900F3FA92 /* ALICollectionViewCell.h */,
 				ED7E06CC1C904B6900F3FA92 /* ALICollectionViewCell.m */,
-				ED7E06D41C90518F00F3FA92 /* ALIIconButton.h */,
-				ED7E06D51C90518F00F3FA92 /* ALIIconButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -410,7 +405,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED7E06D61C90518F00F3FA92 /* ALIIconButton.m in Sources */,
 				ED7E06A81C900AAB00F3FA92 /* main.m in Sources */,
 				ED7E06C51C902EC500F3FA92 /* UIView+Ali.m in Sources */,
 				ED7B9F131C8FFF3700CFE772 /* ALITabBarController.m in Sources */,
