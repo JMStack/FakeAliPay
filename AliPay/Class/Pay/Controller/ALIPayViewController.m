@@ -16,7 +16,7 @@
 #define kCell @"cell"
 
 @interface ALIPayViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
-
+≥
 @property (weak, nonatomic) UIView *headerView;
 @property (weak, nonatomic) UICollectionView *mainView;
 @property (strong, nonatomic) NSMutableArray <ALIItemModel *> *itemArray;
@@ -75,7 +75,7 @@
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.itemArray.count;
-//    return 18;
+//    return ;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
