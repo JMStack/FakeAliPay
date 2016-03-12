@@ -21,7 +21,8 @@
     ALICollectionView *collectionView = [super initWithFrame:frame collectionViewLayout: flowLayout];
     collectionView.backgroundColor = [UIColor colorWithRed:209/255.0 green:209/255.0 blue:209/255.0 alpha:1];
     collectionView.bounces = YES;
-    return collectionView;
+    
+    return collectionView; 
 }
 
 @end
