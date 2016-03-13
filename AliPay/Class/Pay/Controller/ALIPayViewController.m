@@ -85,21 +85,22 @@
     cell.itemModel = self.itemArray[indexPath.row];
     return cell;
 }
-//
-//- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-//    return YES;
-//}
 
-- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
-    
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
 }
 
-//- (BOOL)collectionView:(UICollectionView *)collectionView canFocusItemAtIndexPath:(NSIndexPath *)indexPath {
-//    return NO;
-//}
-//
-- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    for (ALICollectionViewCell *cell in [self.mainView visibleCells]) {
+        if (cell.hiddenDeleteButton == NO) {
+            cell.hiddenDeleteButton = YES;
+            //同时更新模形
+            NSIndexPath *indexPath = [self.mainView indexPathForCell:cell];
+            ALIItemModel *itemModel = self.itemArray[indexPath.item];
+            itemModel.deleteIconHidden = YES;
+            break;
+        }
+    }
 }
 
 @end

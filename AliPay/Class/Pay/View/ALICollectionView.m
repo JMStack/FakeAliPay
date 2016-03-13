@@ -8,6 +8,7 @@
 
 #import "ALICollectionView.h"
 #import "ALICollectionViewCell.h"
+#import "ALIItemModel.h"
 
 @interface ALICollectionView () <ALICollectionViewCellDelegate>
 
@@ -42,10 +43,19 @@
     
     if (gesture.state == UIGestureRecognizerStateBegan) {
         
+        //隐藏之前出现过的删除按钮
+        ALICollectionViewCell *preCll = (ALICollectionViewCell *)[self cellForItemAtIndexPath:self.selectedCell];
+        preCll.hiddenDeleteButton = YES;
+        ALIItemModel *item = self.itemModelArray[self.selectedCell.item];
+        item.deleteIconHidden = YES;
+        
         NSIndexPath *index = [self indexPathForItemAtPoint:point];
         self.selectedCell = index;
         ALICollectionViewCell *cell = (ALICollectionViewCell *)[self cellForItemAtIndexPath:index];
+        //改变cell的删除button同时要更新模形,不然会有重用问题
         cell.hiddenDeleteButton = NO;
+        item = self.itemModelArray[index.item];
+        item.deleteIconHidden = NO;
 //        cell.layer.transform = CATransform3DMakeScale(1.1, 1.1, 0);
 //        CABasicAnimation *animation = [CABasicAnimation animation];
 //        animation.keyPath = @"transform.scale";

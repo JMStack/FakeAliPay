@@ -14,6 +14,7 @@
     if (self = [super init]) {
         self.icon = [dict allValues].firstObject;
         self.title = [dict allKeys].firstObject;
+        self.deleteIconHidden = YES;
     }
     return self;
 }

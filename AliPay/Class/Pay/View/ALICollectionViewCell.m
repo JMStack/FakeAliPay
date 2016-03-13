@@ -49,8 +49,10 @@
         [self.contentView addSubview:deleteButton];
         self.deleteButton = deleteButton;
         [deleteButton addTarget:self action:@selector(deleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        
+
         self.backgroundColor = [UIColor whiteColor];
+        self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.bounds];
+        self.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:235/255.0f green:235/255.0f blue:235/255.0f alpha:1];
     }
     return self;
 }
@@ -60,6 +62,7 @@
     
     self.iconView.image = [UIImage imageNamed:itemModel.icon];
     self.iconLabel.text = itemModel.title;
+    self.hiddenDeleteButton = itemModel.deleteIconHidden;
 }
 
 - (BOOL)hiddenDeleteButton {
