@@ -10,4 +10,5 @@
 
 @interface ALICollectionView : UICollectionView
 
+@property (weak, nonatomic) NSMutableArray *itemModelArray;
 @end

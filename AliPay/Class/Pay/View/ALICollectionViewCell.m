@@ -45,7 +45,7 @@
         deleteButton.backgroundColor = [UIColor whiteColor];
         [deleteButton setImage:[UIImage imageNamed:@"Home_delete_icon"] forState:UIControlStateNormal];
         [deleteButton sizeToFit];
-        deleteButton.hidden = NO;
+        deleteButton.hidden = YES;
         [self.contentView addSubview:deleteButton];
         self.deleteButton = deleteButton;
         [deleteButton addTarget:self action:@selector(deleteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -73,7 +73,10 @@
 }
 
 - (void)deleteButtonTapped:(UIButton *)button {
-     NSLog(@"%s",__func__);
+
+    if ([self.delegate respondsToSelector:@selector(deleteCurrentCell)]) {
+        [self.delegate deleteCurrentCell];
+    }
 }
 
 

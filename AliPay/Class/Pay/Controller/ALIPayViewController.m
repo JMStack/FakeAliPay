@@ -18,7 +18,7 @@
 
 @interface ALIPayViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) UIView *headerView;
-@property (weak, nonatomic) UICollectionView *mainView;
+@property (weak, nonatomic) ALICollectionView *mainView;
 @property (strong, nonatomic) NSMutableArray <ALIItemModel *> *itemArray;
 
 @end
@@ -46,10 +46,11 @@
     ALICollectionView *mainView = [[ALICollectionView alloc] initWithFrame:CGRectMake(0, kHeaderViewHeight, self.view.width, self.view.heigth - kHeaderViewHeight - kTabBarHeight)];
     mainView.dataSource = self;
     mainView.delegate = self;
+    mainView.itemModelArray = self.itemArray;
     [self.view addSubview:mainView];
     self.mainView = mainView;
     self.mainView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
-    
+   
     // 注册主视图cell
     [mainView registerClass:[ALICollectionViewCell class] forCellWithReuseIdentifier:kCell];
 }
@@ -82,15 +83,23 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ALICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
     cell.itemModel = self.itemArray[indexPath.row];
-
     return cell;
 }
+//
+//- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+//    return YES;
+//}
 
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    
+}
+
+//- (BOOL)collectionView:(UICollectionView *)collectionView canFocusItemAtIndexPath:(NSIndexPath *)indexPath {
+//    return NO;
+//}
+//
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-
-}
 @end

@@ -10,10 +10,19 @@
 
 @class ALIItemModel;
 
+@protocol ALICollectionViewCellDelegate <NSObject>
+
+@optional
+- (void)deleteCurrentCell;
+
+@end
+
 @interface ALICollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) ALIItemModel *itemModel;
 
 @property (assign, nonatomic) BOOL hiddenDeleteButton;
+
+@property (weak, nonatomic) id <ALICollectionViewCellDelegate> delegate;
 
 @end
