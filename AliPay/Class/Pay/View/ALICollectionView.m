@@ -90,14 +90,18 @@
         //当前手指在哪个item上
         NSIndexPath *indexpath = [self indexPathForItemAtPoint:point];
         if (self.selectedCell != indexpath) {
+            //交换模形
+            [self.itemModelArray exchangeObjectAtIndex:self.selectedCell.item withObjectAtIndex:indexpath.item];
+            //移动cell
             [self moveItemAtIndexPath:self.selectedCell toIndexPath:indexpath];
+            
             self.selectedCell = indexpath;
         }
         return;
     }
     
     if (gesture.state == UIGestureRecognizerStateEnded) {
-        
+        //手指离开屏幕
         [self.coverView removeFromSuperview];
         [self.fakeCellImage removeFromSuperview];
         return;
