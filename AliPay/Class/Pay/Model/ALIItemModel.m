@@ -15,6 +15,7 @@
         self.icon = [dict allValues].firstObject;
         self.title = [dict allKeys].firstObject;
         self.deleteIconHidden = YES;
+        self.destinationController = [UIViewController class];
     }
     return self;
 }

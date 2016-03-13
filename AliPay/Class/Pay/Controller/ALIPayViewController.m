@@ -98,9 +98,14 @@
             NSIndexPath *indexPath = [self.mainView indexPathForCell:cell];
             ALIItemModel *itemModel = self.itemArray[indexPath.item];
             itemModel.deleteIconHidden = YES;
-            break;
+            return;
         }
     }
+    
+    //如果没有删除按钮被显示则跳转
+    UIViewController *viewControll = [[self.itemArray[indexPath.item].destinationController alloc] init];
+    viewControll.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:viewControll animated:YES];
 }
 
 @end
