@@ -15,7 +15,7 @@
 @property (weak, nonatomic) UIImageView *fakeCellImage;
 @property (strong, nonatomic) NSIndexPath *selectedCell;
 @property (weak, nonatomic) UIView *coverView;
-
+@property (assign, nonatomic) CGPoint prePoint;
 @end
 
 #define kPerRowItemCount 4
@@ -43,6 +43,7 @@
     
     if (gesture.state == UIGestureRecognizerStateBegan) {
         
+        self.prePoint = point;
         //隐藏之前出现过的删除按钮
         ALICollectionViewCell *preCll = (ALICollectionViewCell *)[self cellForItemAtIndexPath:self.selectedCell];
         preCll.hiddenDeleteButton = YES;
@@ -82,7 +83,7 @@
             self.fakeCellImage = fakeCell;
             
             UIView *coverView = [[UIView alloc] initWithFrame:cell.bounds];
-            coverView.backgroundColor = [UIColor whiteColor];
+            coverView.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:0.95];
             [cell addSubview:coverView];
             self.coverView = coverView;
         }];
@@ -96,7 +97,10 @@
     
     if (gesture.state == UIGestureRecognizerStateChanged) {
         //移动假的cell
-        self.fakeCellImage.center = point;
+//        self.fakeCellImage.center = point;
+        CGPoint offset = CGPointMake(point.x - self.prePoint.x, point.y - self.prePoint.y);
+        self.prePoint = point;
+        self.fakeCellImage.transform = CGAffineTransformTranslate(self.fakeCellImage.transform, offset.x, offset.y);
         //当前手指在哪个item上
         NSIndexPath *indexpath = [self indexPathForItemAtPoint:point];
         if (self.selectedCell != indexpath) {
